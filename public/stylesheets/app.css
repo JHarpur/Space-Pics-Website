@@ -1,0 +1,40 @@
+.icon {
+    font-size: 2em;
+}
+
+.container.main {
+    margin-top: 7.0em;
+}
+
+.ui.navbar {
+	margin-top: 30px !important;
+}
+
+.padding-reset{
+	padding: 0px !important;
+}
+
+.ui.message{
+	padding: 40px !important;
+}
+
+
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d4/Ireland_from_space_edit2.jpg");
+    background-size: cover;
+}
+
+#header {
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#aboutPage{
+    margin: 50;
+}
+
+
+#delete {
+    display: inline;
+}

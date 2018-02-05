@@ -1,0 +1,45 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+
+     <div class="row">
+            <div class="column padding-reset">
+                <div class="ui large message">
+                    <h1 class="ui huge header">Welcome!</h1>
+                        <p>The following is a website dedicated to my favourite space pictures. Enjoy!</p>
+                        <a href="/pics/about" class="ui blue button">About &raquo;</a>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="ui huge header" id="header">JAMES' FAVOURITE SPACE PHOTOS</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% pics.forEach(function(pic){ %>
+                <div class="item">
+                    <div class="image">       
+                        <img src="<%= pic.image %>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/pics/<%=pic._id%>"><%=pic.title %></a>
+                        <div class="meta">
+                            <span><%= pic.created.toDateString() %></span>
+                        </div>
+                        <div class="description">
+                            <p><%- pic.body.substring(0, 100) %>...</p> 
+                        </div>
+                        <div class="extra">
+                            <a class="ui floated basic blue button" href="/pics/<%=pic._id%>">
+                                Read More
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
