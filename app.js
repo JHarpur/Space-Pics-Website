@@ -118,7 +118,7 @@ app.delete("/pics/:id", function(req, res){
            res.redirect("/pics");
        }
    });
-   //redirect somewhere
+
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
