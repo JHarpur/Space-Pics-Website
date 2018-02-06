@@ -9,7 +9,8 @@ const ejsLint = require('ejs-lint');
 
 
 // APP CONFIG
-mongoose.connect("mongodb://localhost/spacePhotosApp");
+// mongoose.connect("mongodb://localhost/spacePhotosApp");
+mongoose.connect("mongodb://JHarpur-IE:Marie384@ds125068.mlab.com:25068/space_photos");
 app.set("view engine", "ejs"); 
 app.use(express.static("public")); 
 app.use(bodyParser.urlencoded({extended: true})); 
@@ -99,7 +100,7 @@ app.get("/pics/:id/edit", function(req,res){
 
 //UPDATE ROUTE
 app.put("/pics/:id", function(req, res){
-   Pic.findByIdAndUpdate(req.params.id, req.pic.blog, function(err, updatedPic){
+   Pic.findByIdAndUpdate(req.params.id, req.body.pic, function(err, updatedPic){
        if(err) {
            res.redirect("/pics");
            } else {
